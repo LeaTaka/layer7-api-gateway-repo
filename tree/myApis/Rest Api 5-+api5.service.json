@@ -1,56 +1,56 @@
 {
-"goid": "84449671abe2a5b143051dbdfdf7e685",
-"guid": "f516508a-c166-4c09-8134-1b6bd3615868",
-"name": "Rest Api 1",
-"resolutionPath": "/api1",
-"serviceType": "WEB_API",
-"checksum": "cef71354d1ec51ecdb157a761e0e8df6cd489b5d",
-"enabled": true,
-"folderPath": "/myApis",
-"methodsAllowed": [
-  "GET",
-  "POST",
-  "PUT"
-],
-"tracingEnabled": false,
-"wssProcessingEnabled": false,
-"laxResolution": false,
-"policy": {
-  "code": {
-    "All": [
-      { "SetVariable": { "variable": "service_specific_var", "expression": "hello api 1" } },
-      {
-        "ManageTransportPropertiesHeaders": {
-          "targetMessage": "REQUEST",
-          "operations": [
-            { "action": "ADD_OR_REPLACE", "name": "traceparent", "value": "${request.http.header.traceparent}" },
-            { "action": "ADD_OR_REPLACE", "name": "tracestate", "value": "${request.http.header.tracestate}" }
-          ]
+  "goid": "84449671abe2a5b143051dbdfdf7e685",
+  "guid": "f516508a-c166-4c09-8134-1b6bd3615868",
+  "name": "Rest Api 5",
+  "resolutionPath": "/api5",
+  "serviceType": "WEB_API",
+  "checksum": "cef71354d1ec51ecdb157a761e0e8df6cd489b5d",
+  "enabled": true,
+  "folderPath": "/myApis",
+  "methodsAllowed": [
+    "GET",
+    "POST",
+    "PUT"
+  ],
+  "tracingEnabled": false,
+  "wssProcessingEnabled": false,
+  "laxResolution": false,
+  "policy": {
+    "code": {
+      "All": [
+        { "SetVariable": { "variable": "service_specific_var", "expression": "hello Api 5" } },
+        {
+          "SetTransportPropertiesHeaders": {
+            "targetMessage": "REQUEST",
+            "operations": [
+              { "action": "ADD_OR_REPLACE", "name": "traceparent", "value": "${request.http.header.traceparent}" },
+              { "action": "ADD_OR_REPLACE", "name": "tracestate", "value": "${request.http.header.tracestate}" }
+            ]
+          }
+        },
+        {
+          "SetTransportPropertiesHeaders": {
+            "targetMessage": "REQUEST",
+            "operations": [
+              { "action": "ADD", "name": "AMG-Request-Id", "value": "${requestId}" }
+            ]
+          }
+        },
+        {
+          "SetTransportPropertiesHeaders": {
+            "targetMessage": "RESPONSE",
+            "operations": [
+              { "action": "ADD_OR_REPLACE", "name": "AMG-Timestamp", "value": "${gateway.time.yyyy-MM-dd'T'HH:mm:ss'Z'}" }
+            ]
+          }
+        },
+        {
+          "Include": {
+            "policyGuid": "a9f7163b-d17a-42e8-9b75-855ca6f67c08",
+            "policyName": "Generic API Template"
+          }
         }
-      },
-      {
-        "ManageTransportPropertiesHeaders": {
-          "targetMessage": "REQUEST",
-          "operations": [
-            { "action": "ADD", "name": "AMG-Request-Id", "value": "${requestId}" }
-          ]
-        }
-      },
-      {
-        "ManageTransportPropertiesHeaders": {
-          "targetMessage": "RESPONSE",
-          "operations": [
-            { "action": "ADD_OR_REPLACE", "name": "AMG-Timestamp", "value": "${gateway.time.yyyy-MM-dd'T'HH:mm:ss'Z'}" }
-          ]
-        }
-      },
-      {
-        "Include": {
-          "policyGuid": "a9f7163b-d17a-42e8-9b75-855ca6f67c08",
-          "policyName": "Generic API Template"
-        }
-      }
-    ]
+      ]
+    }
   }
-}
 }
