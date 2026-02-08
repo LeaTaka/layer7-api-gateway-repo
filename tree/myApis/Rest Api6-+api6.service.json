@@ -17,7 +17,7 @@
       "code": {
         "All": [
           {
-            "ManageTransportHeaders": {
+            "ManageTransportProperties/Headers": {
               "targetMessage": "request",
               "action": "ADD_OR_REPLACE",
               "headerName": "X-Env-Tag",
