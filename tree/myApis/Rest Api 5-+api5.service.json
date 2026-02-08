@@ -14,6 +14,45 @@
     "wssProcessingEnabled": false,
     "laxResolution": false,
     "policy": {
-      "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<wsp:Policy xmlns:L7p=\"http://www.layer7tech.com/ws/policy\" xmlns:wsp=\"http://schemas.xmlsoap.org/ws/2002/12/policy\">\n    <wsp:All wsp:Usage=\"Required\">\n        <L7p:HttpRoutingAssertion>\n            <L7p:ProtectedServiceUrl stringValue=\"http://app-3-java.test-apps.svc:8080/up\"/>\n            <L7p:RequestHeaderRules httpPassthroughRuleSet=\"included\">\n                <L7p:ForwardAll booleanValue=\"true\"/>\n                <L7p:Rules httpPassthroughRules=\"included\">\n                    <L7p:item httpPassthroughRule=\"included\">\n                        <L7p:Name stringValue=\"Cookie\"/>\n                    </L7p:item>\n                    <L7p:item httpPassthroughRule=\"included\">\n                        <L7p:Name stringValue=\"SOAPAction\"/>\n                    </L7p:item>\n                </L7p:Rules>\n            </L7p:RequestHeaderRules>\n            <L7p:RequestParamRules httpPassthroughRuleSet=\"included\">\n                <L7p:ForwardAll booleanValue=\"true\"/>\n                <L7p:Rules httpPassthroughRules=\"included\"/>\n            </L7p:RequestParamRules>\n            <L7p:ResponseHeaderRules httpPassthroughRuleSet=\"included\">\n                <L7p:ForwardAll booleanValue=\"true\"/>\n                <L7p:Rules httpPassthroughRules=\"included\">\n                    <L7p:item httpPassthroughRule=\"included\">\n                        <L7p:Name stringValue=\"Set-Cookie\"/>\n                    </L7p:item>\n                </L7p:Rules>\n            </L7p:ResponseHeaderRules>\n            <L7p:SamlAssertionVersion intValue=\"2\"/>\n        </L7p:HttpRoutingAssertion>\n    </wsp:All>\n</wsp:Policy>\n"
+      "code": {
+        "All": [
+          {
+            "HttpRouting": {
+              "keyAlias": "api5",
+              "nonDefaultKeystoreId": "00000000000000000000000000000002",
+              "protectedServiceUrl": "http://app-3-java.test-apps.svc:8080/up",
+              "requestHeaderRules": {
+                ".type": "httpPassthroughRuleSet",
+                "forwardAll": true,
+                "rules": [
+                  {
+                    ".type": "httpPassthroughRule",
+                    "name": "Cookie"
+                  },
+                  {
+                    ".type": "httpPassthroughRule",
+                    "name": "SOAPAction"
+                  }
+                ]
+              },
+              "requestParamRules": {
+                ".type": "httpPassthroughRuleSet",
+                "forwardAll": true,
+                "rules": []
+              },
+              "responseHeaderRules": {
+                ".type": "httpPassthroughRuleSet",
+                "forwardAll": true,
+                "rules": [
+                  {
+                    ".type": "httpPassthroughRule",
+                    "name": "Set-Cookie"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
     }
   }
