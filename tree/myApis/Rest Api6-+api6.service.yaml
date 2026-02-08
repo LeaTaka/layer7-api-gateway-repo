@@ -1,0 +1,38 @@
+name: Rest Api 6
+resolutionPath: /api6
+serviceType: WEB_API
+enabled: true
+folderPath: /myApis
+methodsAllowed:
+  - GET
+  - POST
+  - PUT
+  - DELETE
+tracingEnabled: false
+wssProcessingEnabled: false
+laxResolution: false
+policy:
+  code:
+    All:
+      - HttpRouting:
+          keyAlias: api6
+          nonDefaultKeystoreId: '00000000000000000000000000000002'
+          protectedServiceUrl: 'http://app-3-java.test-apps.svc:8080/up'
+          requestHeaderRules:
+            .type: httpPassthroughRuleSet
+            forwardAll: true
+            rules:
+              - .type: httpPassthroughRule
+                name: Cookie
+              - .type: httpPassthroughRule
+                name: SOAPAction
+          requestParamRules:
+            .type: httpPassthroughRuleSet
+            forwardAll: true
+            rules: []
+          responseHeaderRules:
+            .type: httpPassthroughRuleSet
+            forwardAll: true
+            rules:
+              - .type: httpPassthroughRule
+                name: Set-Cookie
