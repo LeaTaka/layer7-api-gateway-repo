@@ -2,7 +2,6 @@
     "name": "Rest Api 5",
     "resolutionPath": "/api5",
     "serviceType": "WEB_API",
-    "checksum": "b38dde5b65ba6693a8a31dbaecb79aed607905e9",
     "enabled": true,
     "folderPath": "/myApis",
     "methodsAllowed": [
