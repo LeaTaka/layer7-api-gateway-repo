@@ -18,8 +18,8 @@
         "All": [
           {
             "AddHeader": {
-              "headerName": "x-custom-token",
-              "headerValue": "abc",
+              "headerName": "baggage",
+              "headerValue": "test=OK",
               "removeExisting": true,
               "target": "REQUEST"
             }
