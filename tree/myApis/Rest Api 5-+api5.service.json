@@ -65,7 +65,7 @@
             }
           },
           {
-          "AddHeader": {
+          "AddResponseHeader": {
             "headerName": "tttt",
             "headerValue": "tttt"
             }
