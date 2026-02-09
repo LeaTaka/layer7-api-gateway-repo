@@ -18,7 +18,7 @@
         "All": [
           {
           "SetVariable": {
-            "expression": "${gateway.request}",
+            "expression": "${request.time}",
             "variable": "gwStart"
             }
           },
