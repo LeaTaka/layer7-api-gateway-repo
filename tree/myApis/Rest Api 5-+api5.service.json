@@ -17,13 +17,6 @@
       "code": {
         "All": [
           {
-          "SetVariable": {
-            "expression": "${request.time}",
-            "dataType": "dateTime",
-            "variable": "policyBeginTime"
-            }
-          },
-          {
             "AddHeader": {
               "headerName": "policyBeginTime",
               "headerValue": "${policyBeginTime}",
@@ -64,6 +57,13 @@
                   }
                 ]
               }
+            }
+          },
+          {
+          "SetVariable": {
+            "expression": "${gateway.time - request.time}",
+            "dataType": "dateTime",
+            "variable": "policyBeginTime"
             }
           },
           {
