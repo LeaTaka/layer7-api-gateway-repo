@@ -18,8 +18,8 @@
         "All": [
           {
             "AddHeader": {
-              "headerName": "policyBeginTime",
-              "headerValue": "${policyBeginTime}",
+              "headerName": "requestTime",
+              "headerValue": "${request.time}",
               "target": "REQUEST"
             }
           },
@@ -62,14 +62,13 @@
           {
           "SetVariable": {
             "expression": "${gateway.time - request.time}",
-            "dataType": "dateTime",
-            "variable": "policyBeginTime"
+            "variable": "policyDuration"
             }
           },
           {
           "AddHeader": {
-            "headerName": "policy-duration",
-            "headerValue": "${gateway.time - policyBeginTime}",
+            "headerName": "policyDuration",
+            "headerValue": "${policyDuration}",
             "target": "RESPONSE"
             }
           }
