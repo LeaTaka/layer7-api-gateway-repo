@@ -14,11 +14,9 @@ laxResolution: false
 policy:
   code:
     All:
-      # - AddHeader:
-      #     headerName: x-custom-token
-      #     headerValue: abc
-      #     removeExisting: true
-      #     target: REQUEST
+      - AddHeader:
+          headerName: x-custom-token
+          headerValue: abc
       - HttpRouting:
           keyAlias: api6
           nonDefaultKeystoreId: '00000000000000000000000000000002'

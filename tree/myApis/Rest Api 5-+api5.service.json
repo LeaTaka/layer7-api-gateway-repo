@@ -19,9 +19,7 @@
           {
             "AddHeader": {
               "headerName": "test1",
-              "headerValue": "request=OK",
-              "removeExisting": true,
-              "target": "REQUEST"
+              "headerValue": "${gateway.time}"
             }
           },
           {
@@ -58,14 +56,6 @@
                   }
                 ]
               }
-            }
-          },
-          {
-            "AddHeader": {
-              "headerName": "test2",
-              "headerValue": "response=OK",
-              "removeExisting": true,
-              "target": "RESPONSE"
             }
           }
         ]
