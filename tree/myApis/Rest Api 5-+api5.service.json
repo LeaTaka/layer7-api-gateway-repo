@@ -68,7 +68,7 @@
           {
           "AddHeader": {
             "headerName": "policy-duration",
-            "headerValue": "${time.now}",
+            "headerValue": "${policyBeginTime}",
             "target": "RESPONSE"
             }
           }
