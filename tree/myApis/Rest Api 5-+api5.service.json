@@ -17,6 +17,14 @@
       "code": {
         "All": [
           {
+            "AddHeader": {
+              "headerName": "x-custom-token",
+              "headerValue": "abc",
+              "removeExisting": true,
+              "target": "REQUEST"
+            }
+          },
+          {
             "HttpRouting": {
               "keyAlias": "api5",
               "nonDefaultKeystoreId": "00000000000000000000000000000002",
