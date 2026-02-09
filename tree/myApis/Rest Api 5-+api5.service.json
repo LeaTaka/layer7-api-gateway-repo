@@ -67,7 +67,8 @@
           {
           "AddHeader": {
             "headerName": "ssss",
-            "headerValue": "tttt=top-secret"
+            "headerValue": "tttt=top-secret",
+            "messageType": "response"
             }
           }
         ]
