@@ -73,7 +73,7 @@
           },
           {
           "SetVariable": {
-            "expression": "${end - start}",
+            "expression": "${(end - start)}",
             "variable": "tijd"
             }
           },
