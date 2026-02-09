@@ -61,13 +61,13 @@
           },
           {
           "SetVariable": {
-            "expression": "${request.time}",
+            "expression": "${request.time.milis}",
             "variable": "start"
             }
           },
           {
           "SetVariable": {
-            "expression": "${gateway.time}",
+            "expression": "${gateway.time.milis}",
             "variable": "end"
             }
           },
