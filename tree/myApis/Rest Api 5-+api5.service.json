@@ -40,6 +40,10 @@
                   {
                     ".type": "httpPassthroughRule",
                     "name": "SOAPAction"
+                  },
+                  {
+                    ".type": "httpPassthroughRule",
+                    "name": "baggage"
                   }
                 ]
               },
@@ -55,6 +59,10 @@
                   {
                     ".type": "httpPassthroughRule",
                     "name": "Set-Cookie"
+                  },
+                  {
+                    ".type": "httpPassthroughRule",
+                    "name": "baggage"
                   }
                 ]
               }
