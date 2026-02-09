@@ -19,9 +19,7 @@
           {
             "AddHeader": {
               "headerName": "baggage",
-              "headerValue": "test=OK",
-              "removeExisting": true,
-              "target": "REQUEST"
+              "headerValue": "test=OK"
             }
           },
           {
