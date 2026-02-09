@@ -23,6 +23,12 @@
             }
           },
           {
+            "AddHeader": {
+              "headerName": "x-gwStart",
+              "headerValue": "${gwStart}"
+            }
+          },
+          {
             "HttpRouting": {
               "keyAlias": "api5",
               "nonDefaultKeystoreId": "00000000000000000000000000000002",
@@ -56,14 +62,6 @@
                   }
                 ]
               }
-            }
-          }
-        ],
-        "All": [
-          {
-            "AddHeader": {
-              "headerName": "x-gateway-duration",
-              "headerValue": "${gateway.timestamp - gwStart}"
             }
           }
         ]
