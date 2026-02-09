@@ -57,17 +57,13 @@
                 ]
               }
             }
-          },
+          }
+        ],
+        "All": [
           {
-            "SetVariable": {
-              "expression": "${gateway.timestamp}",
-              "variable": "gwEnd"
-            }
-          },
-          {
-            "SetVariable": {
-              "expression": "${gwEnd} - ${gwStart}",
-              "variable": "gwLatency"
+            "AddHeader": {
+              "headerName": "x-gateway-duration",
+              "headerValue": "${gateway.timestamp - gwStart}"
             }
           }
         ]
