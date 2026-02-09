@@ -17,9 +17,9 @@
       "code": {
         "All": [
           {
-            "SetVariable": {
-              "name": "gwStart",
-              "value": "${gateway.timestamp}"
+          "SetVariable": {
+            "expression": "${gateway.timestamp}",
+            "variable": "gwStart"
             }
           },
           {
