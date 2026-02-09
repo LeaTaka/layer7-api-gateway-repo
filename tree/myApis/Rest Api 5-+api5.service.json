@@ -60,14 +60,14 @@
               }
             }
           },
-          // {
-          //   "AddHeader": {
-          //     "headerName": "baggage",
-          //     "headerValue": "response=OK",
-          //     "removeExisting": true,
-          //     "target": "RESPONSE"
-          //   }
-          // }
+          {
+            "AddHeader": {
+              "headerName": "baggage",
+              "headerValue": "response=OK",
+              "removeExisting": true,
+              "target": "RESPONSE"
+            }
+          }
         ]
       }
     }
