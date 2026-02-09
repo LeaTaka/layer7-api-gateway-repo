@@ -18,7 +18,7 @@
         "All": [
           {
             "AddHeader": {
-              "headerName": "baggage",
+              "headerName": "test",
               "headerValue": "request=OK",
               "removeExisting": true,
               "target": "REQUEST"
@@ -43,7 +43,7 @@
                   },
                   {
                     ".type": "httpPassthroughRule",
-                    "name": "baggage"
+                    "name": "test"
                   }
                 ]
               },
@@ -62,7 +62,7 @@
                   },
                   {
                     ".type": "httpPassthroughRule",
-                    "name": "baggage"
+                    "name": "test"
                   }
                 ]
               }
@@ -70,7 +70,7 @@
           },
           {
             "AddHeader": {
-              "headerName": "baggage",
+              "headerName": "test",
               "headerValue": "response=OK",
               "removeExisting": true,
               "target": "RESPONSE"
