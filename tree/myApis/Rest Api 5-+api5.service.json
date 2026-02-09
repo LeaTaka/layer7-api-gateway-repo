@@ -25,7 +25,7 @@
           {
             "AddHeader": {
               "headerName": "x-gwStart",
-              "headerValue": "${gwStart}"
+              "headerValue": "${gateway.timestamp}"
             }
           },
           {
