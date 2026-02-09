@@ -18,7 +18,7 @@
         "All": [
           {
             "AddHeader": {
-              "headerName": "test",
+              "headerName": "test1",
               "headerValue": "request=OK",
               "removeExisting": true,
               "target": "REQUEST"
@@ -58,6 +58,14 @@
                   }
                 ]
               }
+            }
+          },
+          {
+            "AddHeader": {
+              "headerName": "test2",
+              "headerValue": "response=OK",
+              "removeExisting": true,
+              "target": "RESPONSE"
             }
           }
         ]
