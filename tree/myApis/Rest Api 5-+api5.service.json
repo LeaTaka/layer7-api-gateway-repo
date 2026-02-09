@@ -19,13 +19,14 @@
           {
           "SetVariable": {
             "expression": "${request.time}",
-            "variable": "gwStart"
+            "variable": "policyBeginTime"
             }
           },
           {
             "AddHeader": {
-              "headerName": "x-gwStart",
-              "headerValue": "${gwStart}"
+              "headerName": "policyBeginTime",
+              "headerValue": "${policyBeginTime}",
+              "target": "REQUEST"
             }
           },
           {
@@ -66,8 +67,8 @@
           },
           {
           "AddHeader": {
-            "headerName": "ssss",
-            "headerValue": "tttt=top-secret",
+            "headerName": "policy-duration",
+            "headerValue": "${gateway.time - policyBeginTime}",
             "target": "RESPONSE"
             }
           }
