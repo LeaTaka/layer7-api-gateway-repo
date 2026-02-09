@@ -23,13 +23,6 @@
             }
           },
           {
-          "AddHeader": {
-            "headerName": "x-gateway-duration",
-            "headerValue": "${gateway.timestamp - gwStart}",
-            "target": "response"
-            }
-          },
-          {
             "HttpRouting": {
               "keyAlias": "api5",
               "nonDefaultKeystoreId": "00000000000000000000000000000002",
@@ -63,7 +56,20 @@
                   }
                 ]
               }
-            }
+            },
+            "PostClientFlow": {
+                "code": {
+                  "All": [
+                    {
+                      "AddHeader": {
+                        "headerName": "x-gateway-duration",
+                        "headerValue": "${gateway.timestamp - gwStart}"
+                      }
+                    }
+                  ]
+                }
+              }
+
           }
         ]
       }
