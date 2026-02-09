@@ -18,14 +18,14 @@
         "All": [
           {
           "SetVariable": {
-            "expression": "${gateway.time}",
+            "expression": "${gateway.request}",
             "variable": "gwStart"
             }
           },
           {
             "AddHeader": {
               "headerName": "x-gwStart",
-              "headerValue": "${gateway.time}"
+              "headerValue": "${gwStart}"
             }
           },
           {
