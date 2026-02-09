@@ -62,6 +62,7 @@
           {
           "SetVariable": {
             "expression": "${gateway.time.millis - request.time.millis}",
+            "dataType": "int",
             "variable": "policyDuration"
             }
           },
