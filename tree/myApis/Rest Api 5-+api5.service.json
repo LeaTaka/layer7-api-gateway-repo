@@ -18,7 +18,8 @@
         "All": [
           {
           "SetVariable": {
-            "expression": "${request.time.millis}",
+            "expression": "${request.time}",
+            "dataType": "dateTime",
             "variable": "policyBeginTime"
             }
           },
@@ -68,7 +69,7 @@
           {
           "AddHeader": {
             "headerName": "policy-duration",
-            "headerValue": "${gateway.time.millis - policyBeginTime}",
+            "headerValue": "${gateway.time - policyBeginTime}",
             "target": "RESPONSE"
             }
           }
