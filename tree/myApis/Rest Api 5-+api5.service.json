@@ -68,7 +68,7 @@
           {
           "AddHeader": {
             "headerName": "policy-duration",
-            "headerValue": "${gateway.time.millis - policyBeginTime}",
+            "headerValue": "${time.now}",
             "target": "RESPONSE"
             }
           }
