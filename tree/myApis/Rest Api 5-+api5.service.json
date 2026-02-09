@@ -67,7 +67,7 @@
           },
           {
           "AddHeader": {
-            "headerName": "policyStartTijd",
+            "headerName": "policy>>>",
             "headerValue": "${request.time}",
             "target": "RESPONSE"
             }
@@ -75,7 +75,7 @@
 
           {
           "AddHeader": {
-            "headerName": "policyEindTijd",
+            "headerName": "policy<<<",
             "headerValue": "${gateway.time}",
             "target": "RESPONSE"
             }
