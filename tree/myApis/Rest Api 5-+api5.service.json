@@ -25,18 +25,8 @@
           {
           "AddHeader": {
             "headerName": "x-gateway-duration",
-            "headerValue": "${gateway.timestamp - gwStart}"
-            }
-          },
-          {
-            "ManageTransportHeaders": {
-              "target": "response",
-              "set": [
-                {
-                  "name": "my-header",
-                  "value": "new-value"
-                }
-              ]
+            "headerValue": "${gateway.timestamp - gwStart}",
+            "target": "response"
             }
           },
           {
