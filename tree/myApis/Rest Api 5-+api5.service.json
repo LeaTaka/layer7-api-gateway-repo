@@ -66,8 +66,8 @@
           },
           {
           "AddHeader": {
-            "headerName": "tttt",
-            "headerValue": "tttt"
+            "headerName": "baggage",
+            "headerValue": "tttt=top-secret"
             }
           }
         ]
