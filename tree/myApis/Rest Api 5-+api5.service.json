@@ -23,6 +23,23 @@
             }
           },
           {
+          "AddHeader": {
+            "headerName": "x-gateway-duration",
+            "headerValue": "${gateway.timestamp - gwStart}"
+            }
+          },
+          {
+            "ManageTransportHeaders": {
+              "target": "response",
+              "set": [
+                {
+                  "name": "my-header",
+                  "value": "new-value"
+                }
+              ]
+            }
+          },
+          {
             "HttpRouting": {
               "keyAlias": "api5",
               "nonDefaultKeystoreId": "00000000000000000000000000000002",
@@ -56,12 +73,6 @@
                   }
                 ]
               }
-            }
-          },
-          {
-          "AddResponseHeader": {
-            "headerName": "x-gateway-time-ms",
-            "headerValue": "${gateway.timestamp - gwStart}"
             }
           }
         ]
