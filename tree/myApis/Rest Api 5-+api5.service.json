@@ -65,8 +65,9 @@
             }
           },
           {
-            "Log": {
-              "message": "API execution time: ${gwEnd - gwStart} ms"
+            "SetVariable": {
+              "expression": "${gwEnd} - ${gwStart}",
+              "variable": "gwLatency"
             }
           }
         ]
