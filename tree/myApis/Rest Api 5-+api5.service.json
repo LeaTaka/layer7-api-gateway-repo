@@ -68,7 +68,7 @@
           "AddHeader": {
             "headerName": "ssss",
             "headerValue": "tttt=top-secret",
-            "scope": "target"
+            "target": "response"
             }
           }
         ]
