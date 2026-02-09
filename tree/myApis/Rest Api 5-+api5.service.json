@@ -18,8 +18,8 @@
         "All": [
           {
             "AddHeader": {
-              "headerName": "test1",
-              "headerValue": "${gateway.time}"
+              "headerName": "baggage",
+              "headerValue": "time=${gateway.time}"
             }
           },
           {
