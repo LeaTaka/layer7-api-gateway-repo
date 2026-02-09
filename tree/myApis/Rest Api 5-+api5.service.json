@@ -17,9 +17,9 @@
       "code": {
         "All": [
           {
-            "AddHeader": {
-              "headerName": "baggage",
-              "headerValue": "time=${gateway.time}"
+            "SetVariable": {
+              "name": "gwStart",
+              "value": "${gateway.timestamp}"
             }
           },
           {
@@ -56,6 +56,12 @@
                   }
                 ]
               }
+            }
+          },
+          {
+            "AddHeader": {
+              "headerName": "x-gateway-time-ms",
+              "headerValue": "${gateway.timestamp - gwStart}"
             }
           }
         ]
