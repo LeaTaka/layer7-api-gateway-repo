@@ -59,9 +59,10 @@
             }
           },
           {
-            "AddHeader": {
-              "headerName": "x-gateway-time-ms",
-              "headerValue": "${gateway.timestamp - gwStart}"
+          "AddHeader": {
+            "headerName": "x-gateway-time-ms",
+            "headerValue": "${gateway.timestamp - gwStart}",
+            "direction": "response"
             }
           }
         ]
