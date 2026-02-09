@@ -56,20 +56,18 @@
                   }
                 ]
               }
-            },
-            "PostClientFlow": {
-                "code": {
-                  "All": [
-                    {
-                      "AddHeader": {
-                        "headerName": "x-gateway-duration",
-                        "headerValue": "${gateway.timestamp - gwStart}"
-                      }
-                    }
-                  ]
-                }
-              }
-
+            }
+          },
+          {
+            "SetVariable": {
+              "expression": "${gateway.timestamp}",
+              "variable": "gwEnd"
+            }
+          },
+          {
+            "Log": {
+              "message": "API execution time: ${gwEnd - gwStart} ms"
+            }
           }
         ]
       }
