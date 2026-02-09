@@ -61,7 +61,7 @@
           },
           {
           "SetVariable": {
-            "expression": "${gateway.time - request.time}",
+            "expression": "${gateway.time.millis - request.time.millis}",
             "variable": "policyDuration"
             }
           },
