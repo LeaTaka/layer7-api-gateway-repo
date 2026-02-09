@@ -61,8 +61,14 @@
           },
           {
           "SetVariable": {
-            "expression": "${long(gateway.time.millis) - long(request.time.millis)}",
-            "variable": "policyDuration"
+            "expression": "${long(request.time.millis)}",
+            "variable": "start"
+            }
+          },
+          {
+          "SetVariable": {
+            "expression": "${long(gateway.time.millis)}",
+            "variable": "end"
             }
           },
           {
@@ -77,6 +83,14 @@
           "AddHeader": {
             "headerName": "policy<<<",
             "headerValue": "${gateway.time}",
+            "target": "RESPONSE"
+            }
+          },
+
+          {
+          "AddHeader": {
+            "headerName": "CHECK",
+            "headerValue": "${end - start}",
             "target": "RESPONSE"
             }
           }
