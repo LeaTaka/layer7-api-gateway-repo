@@ -19,7 +19,7 @@
           {
             "AddHeader": {
               "headerName": "baggage",
-              "headerValue": "test=OK",
+              "headerValue": "request=OK",
               "removeExisting": true,
               "target": "REQUEST"
             }
@@ -58,6 +58,14 @@
                   }
                 ]
               }
+            }
+          },
+          {
+            "AddHeader": {
+              "headerName": "baggage",
+              "headerValue": "response=OK",
+              "removeExisting": true,
+              "target": "RESPONSE"
             }
           }
         ]
