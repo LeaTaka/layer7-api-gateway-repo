@@ -40,10 +40,6 @@
                   {
                     ".type": "httpPassthroughRule",
                     "name": "SOAPAction"
-                  },
-                  {
-                    ".type": "httpPassthroughRule",
-                    "name": "test"
                   }
                 ]
               },
@@ -59,21 +55,9 @@
                   {
                     ".type": "httpPassthroughRule",
                     "name": "Set-Cookie"
-                  },
-                  {
-                    ".type": "httpPassthroughRule",
-                    "name": "test"
                   }
                 ]
               }
-            }
-          },
-          {
-            "AddHeader": {
-              "headerName": "test",
-              "headerValue": "response=OK",
-              "removeExisting": true,
-              "target": "RESPONSE"
             }
           }
         ]
