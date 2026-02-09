@@ -67,8 +67,16 @@
           },
           {
           "AddHeader": {
-            "headerName": "policyDuration",
-            "headerValue": "${policyDuration}",
+            "headerName": "policyStartTime",
+            "headerValue": "${request.time.millis}",
+            "target": "RESPONSE"
+            }
+          },
+
+          {
+          "AddHeader": {
+            "headerName": "policyEndTime",
+            "headerValue": "${gateway.time}",
             "target": "RESPONSE"
             }
           }
