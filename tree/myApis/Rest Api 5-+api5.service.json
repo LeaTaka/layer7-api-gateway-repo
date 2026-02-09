@@ -72,13 +72,18 @@
             }
           },
           {
+          "SetVariable": {
+            "expression": "${end - start}",
+            "variable": "tijd"
+            }
+          },
+          {
           "AddHeader": {
             "headerName": "policy>>>",
             "headerValue": "${request.time}",
             "target": "RESPONSE"
             }
           },
-
           {
           "AddHeader": {
             "headerName": "policy<<<",
@@ -86,11 +91,10 @@
             "target": "RESPONSE"
             }
           },
-
           {
           "AddHeader": {
             "headerName": "CHECK",
-            "headerValue": "${end - start}",
+            "headerValue": "${tijd}",
             "target": "RESPONSE"
             }
           }
